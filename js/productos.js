@@ -12,6 +12,7 @@ createApp({
             imagen: "",
             stock: 0,
             precio: 0,
+            tipo:"",
         }
     },
     methods: {
@@ -48,7 +49,8 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock,
-                imagen: this.imagen
+                imagen: this.imagen,
+                tipo:this.tipo
             };
             var options = {
                 body: JSON.stringify(producto),
@@ -71,7 +73,8 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock - 1,
-                imagen: this.imagen
+                imagen: this.imagen,
+                tipo:this.tipo
             };
             var options = {
                 body: JSON.stringify(producto),
@@ -99,6 +102,7 @@ createApp({
                     this.imagen = data.imagen;
                     this.stock = data.stock;
                     this.precio = data.precio;
+                    this.tipo = data.tipo;
                 })
                 .catch(err => {
                     console.error(err);
@@ -109,7 +113,8 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock - 1,
-                imagen: this.imagen
+                imagen: this.imagen,
+                tipo:this.tipo
             };
             var options = {
                 body: JSON.stringify(producto),
