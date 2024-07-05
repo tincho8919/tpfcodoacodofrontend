@@ -34,8 +34,8 @@
                                     <th scope="col">Id</th>
                                     <th scope="col">Nombre</th>
                                     <th scope="col">Precio</th>
+                                    <th scope="col">Color</th>
                                     <th scope="col">Stock</th>
-                                    <th scope="col">Tipo</th>
                                     <th scope="col">Imagen</th>
                                     <th scope="col">Acciones</th>
                                 </tr>
@@ -45,8 +45,8 @@
                                     <td scope="row">{{ producto.id }}</td>
                                     <td>{{ producto.nombre }}</td>
                                     <td>{{ producto.precio }}</td>
+                                    <td>{{ producto.color }}</td>
                                     <td>{{ producto.stock }}</td>
-                                    <td>{{ producto.tipo }}</td>
                                     <td>
                                         <img width="60" :src="producto.imagen" :alt="producto.nombre">
                                     </td>

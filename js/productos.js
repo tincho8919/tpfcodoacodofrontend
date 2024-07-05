@@ -9,10 +9,10 @@ createApp({
             compraExitosa: false,
             id: 0,
             nombre: "",
+            color: "", 
             imagen: "",
             stock: 0,
             precio: 0,
-            tipo:"",
         }
     },
     methods: {
@@ -49,8 +49,8 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock,
+                color: this.color, 
                 imagen: this.imagen,
-                tipo:this.tipo
             };
             var options = {
                 body: JSON.stringify(producto),
@@ -73,8 +73,8 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock - 1,
+                color: this.color,  
                 imagen: this.imagen,
-                tipo:this.tipo
             };
             var options = {
                 body: JSON.stringify(producto),
@@ -101,8 +101,8 @@ createApp({
                     this.nombre = data.nombre;
                     this.imagen = data.imagen;
                     this.stock = data.stock;
+                    this.color = data.color; 
                     this.precio = data.precio;
-                    this.tipo = data.tipo;
                 })
                 .catch(err => {
                     console.error(err);
@@ -113,8 +113,8 @@ createApp({
                 nombre: this.nombre,
                 precio: this.precio,
                 stock: this.stock - 1,
+                color: this.color,  
                 imagen: this.imagen,
-                tipo:this.tipo
             };
             var options = {
                 body: JSON.stringify(producto),

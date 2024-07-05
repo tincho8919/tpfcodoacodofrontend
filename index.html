@@ -33,7 +33,8 @@
               <img class="card-img-top" :src="elemento.imagen" :alt="elemento.nombre">
               <div class="card-body">
                 <p class="card-title">{{elemento.nombre}}</p>
-                <p class="card-text">Precio: {{elemento.nombre}}</p>
+                <p class="card-text">Precio: {{elemento.precio}}</p>
+                <p class="card-text">Color: {{elemento.color}}</p>
                 <p class="card-text">Stock: {{elemento.stock}}</p>
                 <button v-on:click="comprar(elemento.id)">Comprar</button>
               </div>
